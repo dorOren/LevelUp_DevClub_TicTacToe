@@ -1,0 +1,55 @@
+:root {
+  --cell-size: 100px;
+}
+
+body {
+  margin: 0;
+}
+
+.board {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+#winningMessage {
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	background-color: rgba(0, 0, 0, .9);
+	font-size: 5rem;
+	flex-direction: column;
+}
+
+#winningMessage button {
+	background-color: white;
+	font-weight: bold;
+	border-radius: 10px;
+	border: none;
+}
