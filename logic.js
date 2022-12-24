@@ -27,7 +27,7 @@ restartButton.addEventListener("click", startGame);
 function startGame() {
   circleTurn = false;
   for (let i = 0; i < 9; i++) {
-    cellElements[i].innerText == "";
+    cellElements[i].innerText = "";
     cellElements[i].removeEventListener("click", handleClick);
     cellElements[i].addEventListener("click", handleClick, { once: true });
   }
@@ -74,7 +74,6 @@ function isDraw() {
 }
 
 function placeMark(cell, currentSign) {
-  //cell.classList.add(currentClass);
   cell.innerText = currentSign;
 }
 
